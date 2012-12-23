@@ -1,7 +1,7 @@
-(defun seq (maxvalue)
+(defun seq (l h)
   (if
-    (eq 0 maxvalue) (make-list 1 :initial-element 0)
-    (append (seq (- maxvalue 1)) (make-list 1 :initial-element maxvalue))
+    (eq l h) (cons l '())
+    (append (seq l (- h 1)) (cons h '()))
   )
 )
-(print (reverse (seq 12)))
+(print (seq 1 12))
