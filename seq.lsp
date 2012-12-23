@@ -4,4 +4,4 @@
     (append (seq (- maxvalue 1)) (make-list 1 :initial-element maxvalue))
   )
 )
-(print (seq 12))
+(print (reverse (seq 12)))
